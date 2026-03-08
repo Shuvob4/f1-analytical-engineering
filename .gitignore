@@ -1,0 +1,29 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (don't commit raw data)
+data/
+
+# Terraform state
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# OS
+.DS_Store
+
+# Conda
+*.conda
+conda-lock.yml
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

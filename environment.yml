@@ -1,0 +1,55 @@
+name: f1-platform
+
+channels:
+  - conda-forge      # always prioritize this — more up-to-date
+  - defaults
+
+dependencies:
+  # ── Python version pin ──────────────────────────────────────
+  - python=3.10      # 3.10 is the sweet spot: supported by all tools below
+
+  # ── Core data manipulation ───────────────────────────────────
+  - pandas>=2.0
+  - numpy>=1.24
+  - pyarrow>=12.0    # critical: columnar format bridge between Spark/pandas/S3
+
+  # ── AWS ──────────────────────────────────────────────────────
+  - boto3            # AWS SDK for Python (S3, IAM, etc.)
+  - awscli           # AWS CLI tools
+
+  # ── Spark (PySpark) ──────────────────────────────────────────
+  - pyspark>=3.4     # installs pyspark + compatible Java bindings via conda-forge
+
+  # ── Kafka ────────────────────────────────────────────────────
+  - kafka-python     # Kafka producer/consumer client
+
+  # ── Notebook & Exploration ───────────────────────────────────
+  - jupyter
+  - ipykernel        # so your conda env appears in Jupyter
+
+  # ── Data validation ──────────────────────────────────────────
+  - great-expectations  # data quality checks 
+
+  # ── ML ───────────────────────────────────────────────────────
+  - scikit-learn
+  - xgboost
+  - matplotlib
+  - seaborn
+
+  # ── Dashboard ────────────────────────────────────────────────
+  - streamlit
+
+  # ── Utilities ────────────────────────────────────────────────
+  - python-dotenv    # loads .env files into environment variables
+  - loguru           # much better logging than stdlib logging
+  - pyyaml           # reading config files
+  - tqdm             # progress bars for long ingestion loops
+  - black            # code formatter
+  - pytest           # testing
+
+  # ── pip-only packages (not on conda) ─────────────────────────
+  - pip
+  - pip:
+    - fastf1>=3.3        # F1 historical data — pip only
+    - httpx            
+   

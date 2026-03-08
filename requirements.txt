@@ -1,0 +1,9 @@
+fastf1>=3.0
+boto3
+pyspark
+kafka-python
+apache-airflow
+streamlit
+pandas
+pyarrow
+python-dotenv

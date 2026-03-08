@@ -1,0 +1,7 @@
+# docker-compose.yml — STUB (will grow each day)
+version: "3.8"
+
+services:
+  # Placeholder — Spark, Kafka, Airflow will be added in coming days
+  placeholder:
+    image: hello-world
