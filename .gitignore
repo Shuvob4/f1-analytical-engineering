@@ -27,3 +27,6 @@ conda-lock.yml
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Pkg files
+*.pkg
