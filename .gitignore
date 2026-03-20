@@ -30,3 +30,10 @@ __pycache__/
 
 # Pkg files
 *.pkg
+
+
+# FastF1 Cached Data
+*.ff1pkl
+
+# any database files
+*.sqlite
